@@ -1,7 +1,8 @@
-30pin-simm-ram-arduino
+
+30pin-simm-ram-arduino-mega-2560
 ======================
 
-Library to interface with 30-pin simm ram using an atmega328p on Arduino
+Library to interface with 30-pin simm ram using an atmega328p on Arduino (Updating to support atmega2560)
 
 Copyright (C) 2014 - Rafael Ignacio Zurita <rafaelignacio.zurita@gmail.com>
 LICENSE : read below.
@@ -87,20 +88,9 @@ d = ram_read(2, 0);		/* restore letter "G" from row=2, col=0 */
 
 You can use the ram_test.ino as example for using your 30-pin simm ram.
 
-
-Limitations
------------
-
-SIMM RAM has 12 bit address for rows and columns. Max RAM size here
-is 16MB. We are using just 6 pins for rows and columns, so we
-are limited to 4KB of RAM space.
-
-Addresses space will be of 64rows x 64columns = 4096 addresses
-1 byte each = 4KB of space.
-
-If you need to use more RAM you can solder the 3 analog pins remaining
-to simm ram module pins A6, A7 and A8. It will give you 256 KB of RAM space.
-
+Update
+----------
+The full 12 bit address space will be added to enable full access to the largest sized 16MiB modules. 
 
 References
 ----------
